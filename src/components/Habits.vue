@@ -25,7 +25,7 @@ export default {
   font-size: 1.2rem;
 }
 
-.habit-icons, .addiction-icons {
+.habit-icons {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -34,7 +34,7 @@ export default {
   padding: 1rem 2rem;
 }
 
-.habit-icon, .addiction-icon {
+.habit-icon {
   width: 2rem;
   height: 2rem;
   text-align: center;
@@ -44,7 +44,7 @@ export default {
   padding: 0.7rem;
   border-radius: 10%;
 }
-.habit-icon:hover, .addiction-icon:hover {
+.habit-icon:hover {
   background-color: transparent;
   cursor: pointer;
   transition: all 0.3s ease;

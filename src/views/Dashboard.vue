@@ -10,12 +10,7 @@
       <div class="row">
         <Habits :habits="skills" />
         
-        <div class="card addictions">
-          <h2>Addictions</h2>
-          <div class="addiction-icons">
-            <span v-for="addiction in addictions" :key="addiction" class="addiction-icon">{{ addiction }}</span>
-          </div>
-        </div>
+        <Addiction :addictions="addictions" />
       </div>
 
       <div class="row">
@@ -96,11 +91,13 @@
 import Profile from '../components/Profile.vue';
 import Skills from '../components/Skills.vue';
 import Habits from '../components/Habits.vue';
+import Addiction from '../components/Addiction.vue';
 export default {
   components: {
     Profile,
     Skills,
-    Habits
+    Habits,
+    Addiction
   },
   name: 'Dashboard',
   data() {
@@ -218,13 +215,6 @@ h3 {
   margin: 0;
   font-size: 1.2rem;
 }
-
-.addictions {
-  width: 50%;
-  font-size: 1.2rem;
-}
-
-
 
 .workout {
   width: 50%;
