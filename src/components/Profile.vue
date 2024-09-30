@@ -14,7 +14,7 @@
       <p class="presentation-title">Présentation</p>
       <p class="presentation-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae magnam voluptatem illo iste asperiores !</p>
     </div>
-  </div>
+</div>
 </template>
 
 <script>

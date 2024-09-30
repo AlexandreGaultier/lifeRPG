@@ -1,11 +1,11 @@
 <template>
   <div class="card logs">
-        <h2>Logs</h2>
-        <div class="log-container">
-          <div class="log" v-for="log in logs" :key="log.date">
-            <span class="log-date">{{ log.date }}</span>
-            <span class="log-message">{{ log.message }}</span>
-          </div>
+    <h2>Logs</h2>
+    <div class="log-container">
+        <div class="log" v-for="log in logs" :key="log.date">
+        <span class="log-date">{{ log.date }}</span>
+        <span class="log-message">{{ log.message }}</span>
+        </div>
     </div>
   </div>
 </template>

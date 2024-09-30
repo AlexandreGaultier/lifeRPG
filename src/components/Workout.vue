@@ -1,32 +1,32 @@
 <template>
   <div class="card workout">
-          <h2 class="workout-title">Workout</h2>
-          <h3 class="workout-month">September</h3>
-          <p class="workout-streak">total streak 🔥 12</p>
-          <div class="calendar">
-            <div class="calendar-header">
-              <span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span>
-            </div>
-            <div class="calendar-body">
-              <div v-for="week in 5" :key="'week-'+week" class="calendar-week">
-                <div v-for="day in 7" :key="'day-'+day+'-'+week" class="calendar-day" :class="getDayClass(week, day)"></div>
-              </div>
-            </div>
-            <div class="calendar-legend">
-              <div class="legend-item"><span class="legend-color seance-1"></span> Séance 1</div>
-              <div class="legend-item"><span class="legend-color seance-2"></span> Séance 2</div>
-            </div>
-          </div>
-          <h3>Exercices</h3>
-          <div class="exercise-chips">
-            <div class="chip séance-1 ">Biceps Curl</div>
-            <div class="chip séance-1">SkullCrushers</div>
-      <div class="chip séance-1">Squat</div>
-      <div class="chip séance-2">Développé militaire</div>
-      <div class="chip séance-2">Développé couché</div>
-      <div class="chip séance-2">Rowing</div>
+    <h2 class="workout-title">Workout</h2>
+    <h3 class="workout-month">September</h3>
+    <p class="workout-streak">total streak 🔥 12</p>
+    <div class="calendar">
+    <div class="calendar-header">
+        <span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span>
     </div>
-  </div>
+    <div class="calendar-body">
+        <div v-for="week in 5" :key="'week-'+week" class="calendar-week">
+        <div v-for="day in 7" :key="'day-'+day+'-'+week" class="calendar-day" :class="getDayClass(week, day)"></div>
+        </div>
+    </div>
+    <div class="calendar-legend">
+        <div class="legend-item"><span class="legend-color seance-1"></span> Séance 1</div>
+        <div class="legend-item"><span class="legend-color seance-2"></span> Séance 2</div>
+    </div>
+    </div>
+    <h3>Exercices</h3>
+    <div class="exercise-chips">
+    <div class="chip séance-1 ">Biceps Curl</div>
+    <div class="chip séance-1">SkullCrushers</div>
+    <div class="chip séance-1">Squat</div>
+    <div class="chip séance-2">Développé militaire</div>
+    <div class="chip séance-2">Développé couché</div>
+    <div class="chip séance-2">Rowing</div>
+    </div>
+</div>
 </template>
 
 <script>
@@ -42,11 +42,6 @@ export default {
       if (dayNumber % 3 === 0) return 'seance-2';
       return '';
     },
-//   props: {
-//     workout: {
-//       type: Object,
-//       required: true
-//     }
   }
 }
 </script>
