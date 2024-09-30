@@ -1,22 +1,7 @@
 <template>
   <div class="dashboard">
     <div class="column left-column">
-      <div class="card profile">
-        <div class="row">
-          <div class="column">
-            <div class="row" style="justify-content: space-between;">
-              <h2 class="profile-title">William Saurin</h2>
-              <span class="profile-level">Lv.12</span>
-            </div>
-            <p class="profile-subtitle">Subtitle to change every days</p>
-          </div>
-            <img class="profile-image" src="../assets/beluga.jpg" alt="Profile">
-        </div>
-        <div class="presentation">
-          <p class="presentation-title">Présentation</p>
-          <p class="presentation-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae magnam voluptatem illo iste asperiores !</p>
-        </div>
-      </div>
+      <Profile />
       
       <div class="card skills">
         <h2>Skills</h2>
@@ -127,7 +112,11 @@
 </template>
 
 <script>
+import Profile from '../components/Profile.vue';
 export default {
+  components: {
+    Profile
+  },
   name: 'Dashboard',
   data() {
     return {
@@ -184,7 +173,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .dashboard {
   display: flex;
   flex-wrap: wrap;
@@ -243,41 +232,6 @@ h3 {
   padding: 1rem;
   margin: 0;
   font-size: 1.2rem;
-}
-
-.profile {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: space-between;
-}
-
-.profile h2 {
-  margin: 0;
-  padding: 0 1rem;
-}
-
-.profile p {
-  margin: 0;
-  padding: 0 1rem;
-}
-
-.profile-image {
-  width: 100px;
-  height: 100px;
-  padding: 1rem;
-  border-radius: 20%;
-}
-
-.presentation {
-  padding: 1rem 0;
-  text-align: justify;
-}
-
-.presentation-title {
-  font-size: 1.2rem;
-  font-weight: bold;
 }
 
 .skills {
@@ -505,7 +459,7 @@ h3 {
   border: 2px solid #a8dadc;
 }
 .chip.séance-1:hover {
-  color: fff000;
+  color: #fff;
   background-color: #a8dadc;
   border: 2px solid #a8dadc;
 }
