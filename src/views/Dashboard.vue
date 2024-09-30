@@ -74,15 +74,7 @@
     </div>
 
     <div class="column right-column">
-      <div class="card logs">
-        <h2>Logs</h2>
-        <div class="log-container">
-          <div class="log" v-for="log in logs" :key="log.date">
-            <span class="log-date">{{ log.date }}</span>
-            <span class="log-message">{{ log.message }}</span>
-          </div>
-        </div>
-      </div>
+      <Logs :logs="logs" />
     </div>
   </div>
 </template>
@@ -92,12 +84,14 @@ import Profile from '../components/Profile.vue';
 import Skills from '../components/Skills.vue';
 import Habits from '../components/Habits.vue';
 import Addiction from '../components/Addiction.vue';
+import Logs from '../components/Logs.vue';
 export default {
   components: {
     Profile,
     Skills,
     Habits,
-    Addiction
+    Addiction,
+    Logs
   },
   name: 'Dashboard',
   data() {
@@ -384,34 +378,5 @@ h3 {
 .alimentation-button:hover {
   background-color: #31a354;
   color: white;
-}
-
-.logs {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  gap: 1rem;
-}
-
-.log-container {
-  height: 95vh;
-  overflow-y: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: #31a354 rgba(0, 0, 0, 0);
-}
-
-.log {
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid #ccc;
-}
-
-.log-date {
-  font-weight: bold;
-}
-
-.log-message {
-  display: block;
-  color: #666;
 }
 </style>
